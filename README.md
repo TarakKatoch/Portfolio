@@ -1,23 +1,27 @@
-# Portfolio Website
+# 🚀 Portfolio Website  
 
-🚀 **Live Demo:** [Click Here](https://tarakkatoch.github.io/Portfolio/)
+[![Live Demo](https://img.shields.io/badge/🔗Live%20Demo-Click%20Here-blue)](https://tarakkatoch.github.io/Portfolio/){:target="_blank"}  
 
-## 📌 About
-This is my personal portfolio website, showcasing my projects, skills, and achievements. Built with **HTML, CSS, and JavaScript**, it provides a clean and interactive UI for visitors.
+## 📌 About  
+Welcome to my **personal portfolio website**! This space showcases my **work, skills, and achievements**, providing a sleek and interactive UI for visitors.  
 
-## 🛠️ Features
-- **About Me** section with a witty yet professional touch
-- **Skills** section with an improved UI displaying technical expertise
-- **Projects** section highlighting my work
-- **Resume Download** option
-- **Responsive Design** for seamless experience across devices
+🛠 **Tech Stack:** **HTML, CSS, JavaScript**  
 
-## 🔧 Status
-This portfolio is **still a work in progress**, and new features & refinements will be added soon.
+## 🌟 Features  
+✅ **About Me** – A professional yet engaging introduction  
+✅ **Skills Section** – A visually appealing display of technical expertise  
+✅ **Work Section** – Showcasing my best contributions and experiences  
+✅ **Resume Download** – Quick access to my latest CV  
+✅ **Fully Responsive** – Optimized for all screen sizes  
 
-## 📅 Upcoming Enhancements
-- Live deployment
-- Improved animations and interactivity
-- Contact form integration
+## 🔧 Status  
+🚧 **Currently a Work in Progress** 🚧  
+New features and refinements are on the way! Stay tuned for updates.  
 
-Stay tuned for updates! ✨
+## 🔥 Upcoming Enhancements  
+✨ Live deployment & hosting upgrades  
+✨ Smooth animations & interactive elements  
+✨ Contact form integration  
+
+🔗 **Follow my journey and updates!** 🚀  
+
