@@ -1,7 +1,6 @@
-# 🚀 Portfolio Website  
+# 📑 Portfolio Website  
 
-🚀 **Live Demo:**  
-[![Portfolio](https://img.shields.io/badge/🌐%20View%20Portfolio-007bff?style=for-the-badge&logo=google-chrome&logoColor=white)](https://tarakkatoch.github.io/Portfolio/)
+# 🚀 **Live Demo:** [Click Here](https://tarakkatoch.github.io/Portfolio/)
 
 ## 📌 About  
 Welcome to my **personal portfolio website**! This space showcases my **work, skills, and achievements**, providing a sleek and interactive UI for visitors.  
