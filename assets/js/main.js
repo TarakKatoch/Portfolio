@@ -51,6 +51,8 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
+console.log("ScrollReveal:", typeof ScrollReveal !== "undefined" ? "Loaded" : "Not Loaded");
+
 // SCROLL REVEAL ANIMATION
 const sr = ScrollReveal({
     origin: 'top',
