@@ -354,12 +354,13 @@ img {
 
 /* ===== WORK =====*/
 .work__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto adjusts */
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    align-items: stretch;
     gap: 2rem;
+    max-width: 1400px; /* Ensures enough space */
+    margin: 0 auto;
 }
 
 .work__card {
@@ -594,6 +595,13 @@ img {
 		width: 450px;
 	}
 }
+@media screen and (min-width: 1024px) {
+    .work__container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    }
+}
+
+
 .icon-container {
     text-align: center;
     margin-top: 20px;

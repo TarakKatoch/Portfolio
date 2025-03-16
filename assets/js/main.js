@@ -30,28 +30,34 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-// SCROLL SECTIONS ACTIVE LINK
-const sections = document.querySelectorAll('section[id]')
+// Select all sections with an ID
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav__menu a');
 
-const scrollActive = () =>{
-    const scrollDown = window.scrollY
+const scrollActive = () => {
+    let scrollY = window.scrollY;
 
-  sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id'),
-              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 80; // Adjust offset to match menu height
+        const sectionId = current.getAttribute('id');
+        const sectionLink = document.querySelector(`.nav__menu a[href="#${sectionId}"]`);
 
-        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-            sectionsClass.classList.add('active-link')
-        }else{
-            sectionsClass.classList.remove('active-link')
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            // Remove active-link from all links before adding
+            navLinks.forEach(link => link.classList.remove('active-link'));
+
+            // Add active-link only to the current section's link
+            sectionLink.classList.add('active-link');
         }
-    })
-}
-window.addEventListener('scroll', scrollActive)
+    });
+};
 
-console.log("ScrollReveal:", typeof ScrollReveal !== "undefined" ? "Loaded" : "Not Loaded");
+// Attach event listener for scroll detection
+window.addEventListener('scroll', scrollActive);
+
+// Ensure active state is set on page load
+document.addEventListener('DOMContentLoaded', scrollActive);
 
 // SCROLL REVEAL ANIMATION
 const sr = ScrollReveal({
