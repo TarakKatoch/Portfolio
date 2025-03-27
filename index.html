@@ -20,7 +20,9 @@
 		<header class="l-header">
 			<nav class="nav bd-grid">
 				<div>
-					<a href="#" class="nav__logo">Tarak Katoch</a>
+					<a href="#" class="nav__logo">
+						<img src="assets/img/Tk.png" alt="Tarak Katoch Logo" class="nav__logo-img">
+					</a>
 				</div>
 
 				<div class="nav__menu" id="nav-menu">
@@ -105,11 +107,11 @@
 						</p>
 			
 						<p class="about__text">
-							Outside of tech, I’m an avid basketball player, cyclist, and traveler, always seeking new challenges on and off the court.
+							Outside of tech, I'm an avid basketball player, cyclist, and traveler, always seeking new challenges on and off the court.
 						</p>
 			
 						<p class="about__text">
-							Let’s connect and collaborate on cutting-edge cloud solutions that shape the future! 🚀
+							Let's connect and collaborate on cutting-edge cloud solutions that shape the future! 🚀
 						</p>
 					</div>
 				</div>
@@ -304,18 +306,26 @@
 				<h2 class="section-title">Contact</h2>
 
 				<div class="contact__container bd-grid">
-					<form action="" class="contact__form">
-						<input type="text" placeholder="Name" class="contact__input" id="name" />
-						<input type="email" placeholder="Email" class="contact__input" id="email" />
-						<textarea id="message" cols="0" rows="10" class="contact__input" placeholder="Your message"></textarea>
-						<input type="button" value="Submit" class="contact__button button" id="sendMail" />
+					<form action="" class="contact__form" id="contact-form">
+						<div class="form-group">
+							<input type="text" placeholder="Name" class="contact__input" id="name" required />
+							<div class="error-message" id="name-error">Please enter your name</div>
+						</div>
+						<div class="form-group">
+							<input type="email" placeholder="Email" class="contact__input" id="email" required />
+							<div class="error-message" id="email-error">Please enter a valid email address</div>
+						</div>
+						<div class="form-group">
+							<textarea id="message" cols="0" rows="10" class="contact__input" placeholder="Your message" required></textarea>
+							<div class="error-message" id="message-error">Please enter your message</div>
+						</div>
+						<button type="submit" class="contact__button button" id="sendMail">Send Message</button>
+						<div class="success-message" id="success-message">Message sent successfully!</div>
 					</form>
 				</div>
 			</section>
 		</main>
-		 
 
-		
 		<!-- FOOTER -->
 		<footer class="footer">
 			<p class="footer__title">Tarak Katoch</p>

@@ -72,3 +72,100 @@ sr.reveal('.home__data, .about__img, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400});
 sr.reveal('.home__social-icon',{ interval: 200});
 sr.reveal('.skills__data, .work__img, .contact__input',{delay: 200});
+
+// Contact Form Validation
+const contactForm = document.getElementById('contact-form');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+const messageError = document.getElementById('message-error');
+const successMessage = document.getElementById('success-message');
+const submitButton = document.getElementById('sendMail');
+
+// Email validation regex
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Validate name
+nameInput.addEventListener('input', () => {
+    if (nameInput.value.trim() === '') {
+        nameInput.classList.add('error');
+        nameError.classList.add('show');
+    } else {
+        nameInput.classList.remove('error');
+        nameError.classList.remove('show');
+    }
+});
+
+// Validate email
+emailInput.addEventListener('input', () => {
+    if (!emailRegex.test(emailInput.value)) {
+        emailInput.classList.add('error');
+        emailError.classList.add('show');
+    } else {
+        emailInput.classList.remove('error');
+        emailError.classList.remove('show');
+    }
+});
+
+// Validate message
+messageInput.addEventListener('input', () => {
+    if (messageInput.value.trim() === '') {
+        messageInput.classList.add('error');
+        messageError.classList.add('show');
+    } else {
+        messageInput.classList.remove('error');
+        messageError.classList.remove('show');
+    }
+});
+
+// Form submission
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    let isValid = true;
+    
+    // Validate all fields
+    if (nameInput.value.trim() === '') {
+        nameInput.classList.add('error');
+        nameError.classList.add('show');
+        isValid = false;
+    }
+    
+    if (!emailRegex.test(emailInput.value)) {
+        emailInput.classList.add('error');
+        emailError.classList.add('show');
+        isValid = false;
+    }
+    
+    if (messageInput.value.trim() === '') {
+        messageInput.classList.add('error');
+        messageError.classList.add('show');
+        isValid = false;
+    }
+    
+    if (isValid) {
+        // Disable submit button and show loading state
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+        
+        // Simulate form submission (replace with actual API call)
+        setTimeout(() => {
+            // Show success message
+            successMessage.classList.add('show');
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Reset button state
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message';
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        }, 1500);
+    }
+});
