@@ -311,7 +311,8 @@ img {
 	align-self: center;
 	position: relative;
 	z-index: 1;
-	animation: fadeInUp 1s ease;
+	opacity: 0;
+	animation: fadeInUp 1.2s ease forwards;
 }
 
 .home__title {
@@ -320,7 +321,8 @@ img {
 	background: var(--gradient);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: slideInLeft 1s ease;
+	opacity: 0;
+	animation: fadeInUp 1.2s ease forwards;
 }
 
 .home__title-color {
@@ -333,17 +335,15 @@ img {
 	margin-bottom: 1.5rem;
 	line-height: 1.5;
 	max-width: 480px;
-	animation: fadeInUp 1s ease 0.2s;
 	opacity: 0;
-	animation-fill-mode: forwards;
+	animation: fadeInUp 1s ease 0.4s forwards;
 }
 
 .home__social {
 	display: flex;
 	flex-direction: column;
-	animation: fadeInUp 1s ease 0.4s;
 	opacity: 0;
-	animation-fill-mode: forwards;
+	animation: fadeInUp 1s ease 0.8s forwards;
 }
 
 .home__social-icon {
@@ -364,41 +364,46 @@ img {
 	right: 0;
 	bottom: 0;
 	width: 260px;
-	animation: float 6s ease-in-out infinite;
+	opacity: 0;
+	animation: fadeIn 1.2s ease forwards, float 6s ease-in-out infinite;
 	z-index: 2;
+}
+
+.home__img img {
+	width: 100%;
+	height: auto;
+	display: block;
 }
 
 @keyframes float {
 	0% {
-		transform: translateY(0px);
+		transform: translateY(0);
 	}
 	50% {
-		transform: translateY(-20px);
+		transform: translateY(-40px);
 	}
 	100% {
-		transform: translateY(0px);
+		transform: translateY(0);
 	}
 }
 
 @keyframes fadeInUp {
-	from {
+	0% {
 		opacity: 0;
 		transform: translateY(20px);
 	}
-	to {
+	100% {
 		opacity: 1;
 		transform: translateY(0);
 	}
 }
 
-@keyframes slideInLeft {
-	from {
+@keyframes fadeIn {
+	0% {
 		opacity: 0;
-		transform: translateX(-20px);
 	}
-	to {
+	100% {
 		opacity: 1;
-		transform: translateX(0);
 	}
 }
 
